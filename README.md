@@ -1,4 +1,4 @@
-# Atualizador de BIOS? Para onde vamos, não precisamos de um atualizador de BIOS?
+# Flechar BIOS? Para onde vamos, não precisamos de um flash de BIOS?
 
 ## O que esta ferramenta faz
 Com esta ferramenta, você pode acessar e modificar o menu AMD PBS/AMD CBS e possivelmente fazer overclock da AMD sem precisar atualizar a BIOS, apenas inicializando a partir de um pendrive.
@@ -17,9 +17,9 @@ USE POR SUA CONTA E RISCO
 
 **Nem todas as opções visíveis funcionam ou devem ser usadas.**
 
-**Isso é ainda mais verdadeiro na versão BETA.**
+**Isso é ainda real na versão BETA.**
 
-Alterar as configurações pode danificar seu dispositivo permanentemente, portanto, manuseie com cuidado. Certifique-se de ter um método para recuperar seu dispositivo caso algo dê errado.  Para a maioria das opções, uma limpeza da BIOS é suficiente. No entanto, para algumas configurações mais perigosas, pode ser necessário um replay completo, motivo pelo qual são classificadas como "configurações perigosas".
+Alterar as configurações pode danificar seu dispositivo permanentemente, portanto, manuseie com cuidado. Certifique-se de ter um método para recuperar seu dispositivo caso algo dê errado.  Para a maioria das opções, uma limpeza/resete da BIOS é suficiente. No entanto, para algumas configurações mais perigosas, pode ser necessário um flash de bios completa, motivo pelo qual são classificadas como "configurações perigosas".
 
 # Problema Conhecido (Leia Isto)
 * Usuários da Dell relataram que a BIOS normal não carrega mais após o uso deste procedimento:
@@ -35,7 +35,7 @@ Uma correção adequada será disponibilizada assim que estiver pronta.
 ## Configurações Perigosas
 Configurações conhecidas que podem inutilizar seu dispositivo - Observe que isso se refere principalmente às APUs integradas "bloqueadas" de laptops/dispositivos portáteis, e não às APUs ou CPUs desbloqueadas de desktops.
 * P0State Vid
-* Otimizador de Curva para certas APUs, geralmente da série 5000 desbloqueada - no entanto, isso pode ser feito pelo Windows usando o UXTU para todos os modelos afetados.
+* Otimizador de Curva para certas APUs, geralmente da série 5000 desbloqueada - no entanto, isso pode ser feito pelo Windows usando o [UXTU](UXTU) para todos os modelos afetados.
 
 ## Como funciona
 O AMD PBS/AMD CBS e possivelmente o AMD Overclocking (Aod_Setup) exportam seu banco de dados HII independentemente do fabricante. Portanto, se pudermos carregá-los, poderemos acessar esses menus sem problemas.
