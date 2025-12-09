@@ -90,4 +90,5 @@ Observação: isto pertence ao criador original desta ferramenta, não a mim.
 ![CBS](Photo/CBS%20Menu.jpg)
 ![SALVAR](Photo/Save%20Promt.jpg)
 * Esta deve ser a forma como o pendrive deve ser configurado: FAT32, com a pasta que você baixou descompactada e colocada na raiz do pendrive.
-![USB](Photo/USB.png)
+
+![USB](Photo/USB.jpg)
