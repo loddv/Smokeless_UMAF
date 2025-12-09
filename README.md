@@ -7,7 +7,7 @@ Com esta ferramenta, você pode acessar e modificar o menu AMD PBS/AMD CBS e pos
 
 Não me responsabilizo por quaisquer danos resultantes do uso desta ferramenta. Além disso, este é um backup do projeto original.
 
-USE POR SUA CONTA E RISCO
+#### USE POR SUA CONTA E RISCO
 
 **Ao usar esta ferramenta, você concorda com estas regras.**
 
@@ -19,7 +19,7 @@ USE POR SUA CONTA E RISCO
 
 **Isso é ainda real na versão BETA.**
 
-Alterar as configurações pode danificar seu dispositivo permanentemente, portanto, manuseie com cuidado. Certifique-se de ter um método para recuperar seu dispositivo caso algo dê errado.  Para a maioria das opções, uma limpeza/resete da BIOS é suficiente. No entanto, para algumas configurações mais perigosas, pode ser necessário um flash de bios completa, motivo pelo qual são classificadas como "configurações perigosas".
+>Alterar as configurações pode danificar seu dispositivo permanentemente, portanto, manuseie com cuidado. Certifique-se de ter um método para recuperar seu dispositivo caso algo dê errado.  Para a maioria das opções, uma limpeza/resete da BIOS é suficiente. No entanto, para algumas configurações mais perigosas, pode ser necessário um flash de bios completa, motivo pelo qual são classificadas como "configurações perigosas".
 
 # Problema Conhecido (Leia Isto)
 * Usuários da Dell relataram que a BIOS normal não carrega mais após o uso deste procedimento:
@@ -73,9 +73,9 @@ Se você deseja doar/apoiar, considere apoiar em:
 
 [Patreon](https://www.patreon.com/SmokelessCPU)
 
-Bitcoin: bc1qv09hxpge9tv6zl74778un0x7t7fjlql8h3842r
+>Bitcoin: bc1qv09hxpge9tv6zl74778un0x7t7fjlql8h3842r
 
-ETH:  0xE0EaeA32a24c1559E17ba374FD004823B1fbB15B
+>ETH:  0xE0EaeA32a24c1559E17ba374FD004823B1fbB15B
 
 Observação: isto pertence ao criador original desta ferramenta, não a mim.
 
