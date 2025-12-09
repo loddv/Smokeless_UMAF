@@ -1,89 +1,93 @@
-# Bios Flasher? Where We’re Going, We Don’t Need Bios Flasher?
+# Atualizador de BIOS? Para onde vamos, não precisamos de um atualizador de BIOS?
 
-## What this can do
-With this tool you can access and modify AMD PBS/AMD CBS Menu and possibly AMD Overclocking without flashing, and by just booting from a USB drive
+## O que esta ferramenta faz
+Com esta ferramenta, você pode acessar e modificar o menu AMD PBS/AMD CBS e possivelmente fazer overclock da AMD sem precisar atualizar a BIOS, apenas inicializando a partir de um pendrive.
 
+## Aviso Legal
 
-## Disclaimer
+Não me responsabilizo por quaisquer danos resultantes do uso desta ferramenta. Além disso, este é um backup do projeto original.
 
-I'm not responsible for any damage resulting from the use of this tool. Also, this is a backup of the original project;
+USE POR SUA CONTA E RISCO
 
-USE AT YOUR OWN RISK
+**Ao usar esta ferramenta, você concorda com estas regras.**
 
- **Using this tool you agree also to these rules**
- **Think twice before committing any change**
- **These are real bios settings treat them as such**
- **Not Evey option visable works or should be used**
- **These are even more true with the BETA version**
+**Pense duas vezes antes de fazer qualquer alteração.**
 
-Changing setting could lead to bricking your device, so handle with care. Be sure to have a method to recover your device if things go wrong. For most options a bios clear is suitable, however for some of the more dangerous settings, you might need a proper reflash, which is why they are classed as "dangerous settings".
+**Estas são configurações reais da BIOS, trate-as como tal.**
 
-# Known Problem (Read This)
-* Dell user(s) have reported that the normal bios will not load anymore after using this :
+**Nem todas as opções visíveis funcionam ou devem ser usadas.**
 
-    Fix thanks to (BIT_GAM3R and the Gaming [Laptop Mod Discord Comunity](https://discord.gg/FDgUR5cpCg)):
-    
-    Boot the tool, access the BootManager, delete the Misc Option, this should not be there, it is created by a bug. If you tried accessing the BootManager before...
-    A proper fix will be pushed when ready
-    
-* Doesnt work on the 6000 series(Rembrant) versions of the Onexplayer, AOKZOE, and AYANEO devices
+**Isso é ainda mais verdadeiro na versão BETA.**
 
-## Dangerous Settings
-Known settings that will make your brick your device - Note this primarily refers to the "locked" intergrated laptop/ handheld APUs rather than unlocked desktop APUs or CPUs
-* P0State Vid 
-* Curve Optimizer for certain APUs commonly unlocked 5000 series - however this can be done through windows using UXTU for all affected models
+Alterar as configurações pode danificar seu dispositivo permanentemente, portanto, manuseie com cuidado. Certifique-se de ter um método para recuperar seu dispositivo caso algo dê errado.  Para a maioria das opções, uma limpeza da BIOS é suficiente. No entanto, para algumas configurações mais perigosas, pode ser necessário um replay completo, motivo pelo qual são classificadas como "configurações perigosas".
 
-## How this works
-AMD PBS/AMD CBS and possibly AMD Overclocking (Aod_Setup) export their HII database regardless of the manufacturer, so if we can load these we can access these menus without a problem.
+# Problema Conhecido (Leia Isto)
+* Usuários da Dell relataram que a BIOS normal não carrega mais após o uso deste procedimento:
 
-This package includes two main components: a Loader and the UI component. The latter one are built from a standard edk2 Package.
-On boot from USB the Loader will unregister the existing bios FormBrowser and will load this custom one, proving the new interface for this boot.
+Solução graças a (BIT_GAM3R e à Comunidade Gaming [Laptop Mod Discord](https://discord.gg/FDgUR5cpCg)):
 
-The only drawback of this method is that you need to boot from USB to accessed these menus.
+Inicie a ferramenta, acesse o BootManager, exclua a opção Misc. Ela não deveria estar lá, pois foi criada por um bug.  Se você tentou acessar o BootManager antes...
 
-## How to use it
-Extract in a FAT32 USB, and boot from it, it will load the custom bios UI, Now if you enter Device Manager, AMD PBS/CBS will be there, you can modify what you want, and when done, just hit esc until it ask you to save.
+Uma correção adequada será disponibilizada assim que estiver pronta.
 
-On AMI Bios, in addition to AMD PBS and CBS will be shown also "Setup", this is the regular bios, the edit here might not be saved (AMD PBS/CBS, Aod Setup)
+* Não funciona nas versões da série 6000 (Rembrandt) dos dispositivos Onexplayer, AOKZOE e AYANEO.
 
-# Notable Options
-* Ram Overclocking + Timings - Works on Picasso, Renior "U" and Luccine "U" apus up to 3200mhz, on Renior "H" apus up to 4400mhz, on Steam Deck.
+## Configurações Perigosas
+Configurações conhecidas que podem inutilizar seu dispositivo - Observe que isso se refere principalmente às APUs integradas "bloqueadas" de laptops/dispositivos portáteis, e não às APUs ou CPUs desbloqueadas de desktops.
+* P0State Vid
+* Otimizador de Curva para certas APUs, geralmente da série 5000 desbloqueada - no entanto, isso pode ser feito pelo Windows usando o UXTU para todos os modelos afetados.
 
-    Might work on some Rembrant models, or CZN HX and HS apus with though the amd overclocking menu however all of these apus might have issues expect failure.
-    Disabling gear down mode, power down mode, and setting the command rate seems to work on every apu
+## Como funciona
+O AMD PBS/AMD CBS e possivelmente o AMD Overclocking (Aod_Setup) exportam seu banco de dados HII independentemente do fabricante. Portanto, se pudermos carregá-los, poderemos acessar esses menus sem problemas.
 
-* UMA buffer size - works on all apus allows for different "Vram" amounts
+Este pacote inclui dois componentes principais: um carregador e o componente de interface do usuário. Este último é construído a partir de um pacote edk2 padrão.
+ Ao inicializar a partir do USB, o Loader irá desregistrar o FormBrowser da BIOS existente e carregará este personalizado, fornecendo a nova interface para esta inicialização.
 
-* FCLK Control - Works for Renior H and might work for steam deck, CZN apus, and Rembrant apus.
+A única desvantagem deste método é que você precisa inicializar a partir do USB para acessar esses menus.
 
-* AMD Overclocking menu - Most settings that are in here should work if the menu appears for you
+## Como usar
+Extraia os arquivos para um USB formatado em FAT32 e inicialize a partir dele. A interface da BIOS personalizada será carregada. Agora, se você abrir o Gerenciador de Dispositivos, o AMD PBS/CBS estará lá. Você pode modificar o que desejar e, quando terminar, basta pressionar Esc até que seja solicitado que você salve as alterações.
 
-To have the best chance of talking to me or the creator of this tool this is the server to join [Isle of Zen](https://discord.gg/isle-of-zen-772105072720871435)
+ Na BIOS da AMI, além do AMD PBS e CBS, também será exibida a opção "Configuração". Esta é a BIOS padrão; as alterações feitas aqui podem não ser salvas (AMD PBS/CBS, Configuração Aod).
 
-Reporting issues and asking about behavoir is best done there in #help-n-support
+# Opções Notáveis
+* Overclocking de RAM + Latências - Funciona em APUs Picasso, Renior "U" e Luccine "U" até 3200 MHz, em APUs Renior "H" até 4400 MHz e no Steam Deck.
 
-## Donate
+Pode funcionar em alguns modelos Rembrandt ou em APUs CZN HX e HS através do menu de overclocking da AMD; no entanto, todas essas APUs podem apresentar problemas, incluindo falhas.
 
-If you want to donate/support please consider supportorting on:
+Desativar o Gear Down Mode, o Power Down Mode e definir a taxa de comando parece funcionar em todas as APUs.
+
+* Tamanho do buffer UMA - Funciona em todas as APUs e permite diferentes quantidades de "VRAM".
+
+* Controle de FCLK - Funciona para Renior H e pode funcionar para Steam Deck, APUs CZN e Rembrandt.
+
+ * Menu de Overclocking AMD - A maioria das configurações aqui presentes deve funcionar se o menu aparecer para você.
+
+Para ter a melhor chance de falar comigo ou com o criador desta ferramenta, entre neste servidor: [Isle of Zen](https://discord.gg/isle-of-zen-772105072720871435)
+
+Reportar problemas e perguntar sobre o funcionamento é melhor feito no canal #help-n-support.
+
+## Doações
+
+Se você deseja doar/apoiar, considere apoiar em:
 
 [Patreon](https://www.patreon.com/SmokelessCPU)
 
-BitCoin: bc1qv09hxpge9tv6zl74778un0x7t7fjlql8h3842r
+Bitcoin: bc1qv09hxpge9tv6zl74778un0x7t7fjlql8h3842r
 
-ETH : 0xE0EaeA32a24c1559E17ba374FD004823B1fbB15B
+ETH:  0xE0EaeA32a24c1559E17ba374FD004823B1fbB15B
 
-note this goes to the original creator of this tool not me
+Observação: isto pertence ao criador original desta ferramenta, não a mim.
 
-# Anything that you feel should be included above let me know.
+# Qualquer coisa que você ache que deva ser incluída acima, me avise.
 
 ## Download
 [UniversalAMDFormBrowser](UniversalAMDFormBrowser.zip)
 
-## Photo
-![Main](Photo/Main.jpg)
+## Foto
+![Principal](Photo/Main.jpg)
 ![DevM](Photo/DevM.jpg)
 ![CBS](Photo/CBS%20Menu.jpg)
-![SAVE](Photo/Save%20Promt.jpg)
-* This should be how the usb should be set up fat32, with the folder you downloaded unzipped and placed into the root of the flash drive
+![SALVAR](Photo/Save%20Promt.jpg)
+* Esta deve ser a forma como o pendrive deve ser configurado: FAT32, com a pasta que você baixou descompactada e colocada na raiz do pendrive.
 ![USB](Photo/USB.png)
-
